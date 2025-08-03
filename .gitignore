@@ -1,0 +1,27 @@
+# Crear el archivo .gitignore con contenido
+cat > .gitignore << 'EOF'
+# Archivos auxiliares de LaTeX
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.run.xml
+*.synctex.gz
+*.toc
+*.lof
+*.lot
+
+# Archivos compilados (opcional - algunos prefieren incluir el PDF)
+*.dvi
+*.ps
+
+# Archivos del sistema operativo
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+EOF

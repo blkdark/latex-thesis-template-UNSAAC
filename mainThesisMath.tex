@@ -1,0 +1,196 @@
+%%%%%%%%%%%%%%%%%%%%BLKDARK%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%formato  Latex para tesis de maestria UNSAAC%%%%
+%%%%%%%%BlakeToscani%%%blkantro@yahoo.es%%%%%%%%%%%%
+
+\documentclass[12pt,oneside]{book}
+
+\usepackage{fontspec}
+\usepackage{polyglossia}
+	\setdefaultlanguage{spanish}
+
+\usepackage[left=3.5cm, right=2.5cm, top=2.5cm, bottom=2.5cm]{geometry}
+
+\setcounter{tocdepth}{4}%nivel de numeracion en tabla de contenidos
+\setcounter{secnumdepth}{5} %nivel de numeracion en titulos en documento
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\usepackage{lipsum}
+
+%\usepackage[spanish,es-lcroman,es-nosectiondot,es-tabla]{babel} % lcroman se usa para enumerar con romanos en minuscula ya que no es correcto el uso de romanos mayusculas en español,  es-noindentfirst se usa para quitar la sangria en los parrafos, es-tabla cambia nombre de cuadros a tabla, es-nosectiondotquita punto a la enumaracion de capitulos y subcapitulos
+\usepackage{parskip} %eliminar indentacion a todo el documento
+
+%%%Bibliografia%%%%%%%
+\usepackage[backend=biber,style=apa]{biblatex}
+	\addbibresource{ThesisMath.bib}
+\usepackage{csquotes}
+
+\usepackage{hyperref} %referencias cruzadas
+	\hypersetup{hidelinks}
+%%%%%%%%%%%%%%%%%%%%%%
+
+\setlength{\parskip}{1.5mm}
+\usepackage{graphicx}
+	\graphicspath{{Images/}}
+\usepackage{mfirstuc} %para capitalizar letras
+	\gMFUnocap{de}
+	\gMFUnocap{y}
+	\gMFUnocap{a}
+	\gMFUnocap{de}%
+\usepackage{pdfpages} %para incluir pdfs externos
+\usepackage{lscape}
+
+\usepackage{array,multirow,multicol,makecell} %PARA TABLAS
+\usepackage{rotating}
+\usepackage{float}
+\usepackage{booktabs} 
+\usepackage{wrapfig}
+\usepackage{tabularx}
+%\usepackage{xcolor}
+\usepackage[titles]{tocloft}  %para reducir espacio entre capitulos en el indice
+	\setlength{\cftbeforechapskip}{3pt} 
+%\usepackage{tikz}
+\usepackage{appendix}
+\usepackage{setspace} %para interlineado en los parrafos... \doublespacing (doble espacio) \onehalfspace(un espacio) \singlespace (medio espacio) \spacing{1.5} (definir)
+%\usepackage[usenames,dvipsnames]{xcolor} %para grafica de funciones
+%\usepackage{tkz-fct}
+	
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
+\title{ 	
+		UNIVERSIDAD NACIONAL SAN ANTONIO ABAD DEL CUSCO \\
+		{\large  ESCUELA DE POSGRADO}\\
+		{\large MAESTRIA EN  MATEMATICAS}\\...\\
+		\includegraphics[scale=0.19]{unsaac} \\.\\
+		La Cultura de las Comisiones y su impacto en la informalidad en el sector turistico de Cusco }
+	
+\author{ Proyecto de tesis presentado por:\\
+		Br. Juan Perez\\
+		Para optar el grado academico de Maestro en Matematica\\
+		ASESOR: NOMBRE\\
+		CUSCO-PERU\\
+		2019
+		}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%\renewcommand{\appendixpagename}{Anexos}
+%\renewcommand{\appendixtocname}{Anexos}
+%\renewcommand{\appendixname}{Anexo}
+%\maketitle
+%\setcounter{chapter}{1}
+
+%%%%%%inserta titulo creado en la carpeta caratula%%%%%%%
+\includepdf[pages=1]{./caratula/caratula.pdf}
+\thispagestyle{empty} %para no numerarse en el indice
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\spacing{1.5}  %para poner parrafo a espacio y medio el documento
+
+\frontmatter 
+
+%%%%%Dedicatoria%%%%% SOLO TESIS
+\newpage	
+\chapter*{}
+\thispagestyle{empty}		% para quitar numeracion	
+\addcontentsline{toc}{chapter}{Dedicatoria}
+\begin{flushright}
+	\vspace*{5cm} 
+	\textit{A mi Papá, porque desde siempre allanó mi camino \\ hacia la gran aventura del pensamiento.\\A mi Mamá, porque pudo brindarme las herramientas necesarias\\ para lograr mis objetivos.}
+\end{flushright}
+%%%%%%%%%%%%%%%%%%%	
+
+%%%%%Agradecimiento%%%%% SOLO TESIS
+\newpage
+\chapter*{}
+\thispagestyle{empty}		% para quitar numeracion
+\addcontentsline{toc}{chapter}{Agradecimiento}
+\begin{flushright}
+	\vspace*{5cm} 
+	\textit{Agradecimientos.}
+\end{flushright}
+%%%%%%%%%%%%%%%%%%%	
+
+%%%%%%%%%%%%%%%%%%% 
+\spacing{1.5}  %para poner parrafo a espacio y medio el documento
+	
+	\cleardoublepage %necesario para enumerar correctamente tablas y figuras
+	\addcontentsline{toc}{chapter}{Indice General}
+	\tableofcontents
+	
+	\cleardoublepage %SOLO TESIS
+	\addcontentsline{toc}{chapter}{Lista de Cuadros} %SOLO TESIS
+	\listoftables %SOLO TESIS
+	
+	\cleardoublepage %SOLO TESIS
+	\addcontentsline{toc}{chapter}{Lista de Figuras} %SOLO TESIS
+	\listoffigures %SOLO TESIS
+
+%%%%%%%%%%%%%%%%%%%
+
+%%%%%Resumen%%%%% SOLO TESIS
+\newpage
+\chapter*{\centering \begin{normalsize} RESUMEN \end{normalsize}}
+\thispagestyle{empty}		% para quitar numeracion
+\addcontentsline{toc}{chapter}{Resumen}
+
+La presente tesis de investigación tiene como objetivo determinar el problema de modelamiento del movimiento de un proyectil que se formulan mediante la existencia de las ecuaciones diferenciales fraccionarias no lineales.
+Para la solución se presenta el estudio de las condiciones para la
+recorrido. \\
+
+{\bf Palabras Clave:} AME, keyword B, BKJSD, 
+
+%%%%%Abstract%%%%% SOLO TESIS
+\newpage
+\chapter*{\centering \begin{normalsize} ABSTRACT \end{normalsize}}
+\thispagestyle{empty}		% para quitar numeracion
+\addcontentsline{toc}{chapter}{Abstract}
+
+The objective of this research thesis is to determine the mathematicalmodels of a projectile that are formulated through the existence of nonlinear fractional differential equations for their best modeling in their path.
+For the solution, the study of the conditions for the existence of a fractional differential equation is presented. The differential operator and the initial conditions are taken in the sense of Caputo. The procedure followed to achieve the objectives outlined is following the intuitive idea of Peano's theorem and existence of the upper and lower solution of an ordinary differential equation. to then extend together with the Taylor polynomial and formulate the mathematical models of the movement of a projectile.
+In this thesis, with the support of Wolfran Mathematica 8 computational tools, it has been possible to show the graphics of the movement of a projectile more accurate in its journey. \\
+
+{\bf Keywords:} AME, keyword B, BKJSD, 
+
+%%%%%%%%%%%%%%%%%%%	
+
+%%%%%%%%%%%%%%%%%%%	
+				
+\mainmatter
+\spacing{1.5}  %para poner parrafo a espacio y medio el documento
+	\input{./chapters/introduccion.tex} %SOLO TESIS
+	\input{./chapters/planteamiento.tex}
+	\input{./chapters/marco.tex}
+	\input{./chapters/hipotesis.tex}
+	\input{./chapters/metodologia.tex}
+	\input{./chapters/resultados.tex} %SOLO TESIS
+	\input{./chapters/conclusionesrecomendaciones.tex}  %SOLO TESIS
+	
+
+{\backmatter
+	
+	\input{./chapters/presupuesto.tex}	%SOLO PLAN
+	\input{./chapters/cronograma.tex}  %SOLO PLAN
+
+	\input{./chapters/bibliografia.tex} 
+}
+
+
+	%%%%%%%anexos%%%%%%%%%%%%%%%%%%%%
+	\appendix
+	\newpage
+	\renewcommand{\appendixname}{Anexo}
+	\chapter*{\centering Anexos}
+	\addcontentsline{toc}{chapter}{Anexos}	
+	\renewcommand{\thechapter}{\alph{chapter}}	%para poner numeracion en minusculas
+	\thispagestyle{empty}		% para quitar numeracion       
+    	\input{./chapters/matriz.tex}		
+		\input{./chapters/instrumentos.tex}	% SOLO TESIS
+		\input{./chapters/medios.tex}		% SOLO TESIS
+		\input{./chapters/otros.tex}
+		
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	
+\end{document}
